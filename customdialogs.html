@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.1/purify.min.js"></script>
+        <title>Custom Dialogs</title>
+        <style>
+            #alertDialog {
+                margin-top:10%;
+                padding-left:10%;
+                padding-right:10%;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <button type="button" id="alert">Alert</button>
+            <dialog id="alertDialog">
+                <p>Alert</p>
+                <button id="okButton">Ok</button>
+            </dialog>
+            <button type="button" id="confirm">Confirm</button>
+            <dialog id="confirmDialog">
+                <p>Ok or Cancel</p>
+                <button id="cancelButton">Cancel</button>
+                <button id="okButton2">Ok</button>
+            </dialog>
+            <button type="button" id="prompt">Prompt</button>
+            <dialog id="promptDialog">
+                <p>What is your name?</p>
+                <input type="text" id="name">
+                <button id="cancelButton2">Cancel</button>
+                <button id="okButton3">Ok</button>
+            </dialog>
+            <hr>
+            <output id="output"></output>
+        </main>
+
+        <script type="module">
+            const output = document.getElementById("output");
+            const alertButton = document.getElementById("alert");
+            const alertDialog = document.getElementById("alertDialog")
+            const confirmButton = document.getElementById("confirm");
+            const confirmDialog = document.getElementById("confirmDialog");
+            const promptButton = document.getElementById("prompt");
+            const promptDialog = document.getElementById("promptDialog");
+
+            import {showDialog} from './customdialog.js';
+            import {closeDialog} from './customdialog.js';
+
+            alertButton.addEventListener("click", () => {
+                showDialog(alertDialog);
+            });
+            okButton.addEventListener("click", () => {
+                closeDialog(alertDialog);
+            });
+
+            confirmButton.addEventListener("click", () => {
+                showDialog(confirmDialog);
+            });
+            okButton2.addEventListener("click", () => {
+                closeDialog(confirmDialog)
+                output.innerHTML = "Confirm result : true";
+                
+            })
+            cancelButton.addEventListener("click", () => {
+                closeDialog(confirmDialog)
+                output.innerHTML = "Confirm result : false";
+            })       
+            
+            promptButton.addEventListener("click", () => {
+                showDialog(promptDialog);
+            });
+            okButton3.addEventListener("click", () => {
+                closeDialog(promptDialog);
+                let value = document.getElementsByTagName("input")[0].value;
+                value = DOMPurify.sanitize(value)
+                output.innerHTML = "Prompt result : " + value;
+                
+            })
+            cancelButton2.addEventListener("click", () => {
+                closeDialog(promptDialog);
+                output.innerHTML = "User didn't enter anything";
+            }) 
+        </script>
+    </body>
+</html>

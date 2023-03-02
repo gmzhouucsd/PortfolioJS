@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.1/purify.min.js"></script>
+        <title>Native Dialogs</title>
+    </head>
+    <body>
+        <main>
+            <button type="button" id="alert">Alert</button>
+            <button type="button" id="confirm">Confirm</button>
+            <button type="button" id="prompt">Prompt</button>
+            <button type="button" id="saferPrompt">Safer Prompt</button>
+            <hr>
+            <output id="output"></output>
+        </main>
+
+        <script>
+            document.getElementById("alert").addEventListener("click", function(){alert("Alert")});
+            document.getElementById("confirm").addEventListener("click", confirmFunc);
+            function confirmFunc() {
+                let value;
+                if(confirm("Press OK") == true) {
+                    value = "true";
+                }
+                else {
+                    value = "false";
+                }
+                document.getElementById("output").innerHTML = "The value returned by the confirm method is : " + value;
+    
+            }
+            document.getElementById("prompt").addEventListener("click", promptFunc);
+            function promptFunc() {
+                let value = prompt("What is your name?");
+                if (value == null) {
+                    document.getElementById("output").innerHTML = "User didn’t enter anything";
+                }
+                else {
+                    document.getElementById("output").innerHTML = "Prompt Result: " + value;
+                }
+            }
+            document.getElementById("saferPrompt").addEventListener("click", saferFunc);
+            function saferFunc() {
+                let value = prompt("What is your name?");
+                if (value == null) {
+                    document.getElementById("output").innerHTML = "User didn’t enter anything";
+                }
+                else {
+                    value = DOMPurify.sanitize(value);
+                    document.getElementById("output").innerHTML = "Prompt Result: " + value;
+                }
+            }
+        </script>
+    </body>
+</html>
