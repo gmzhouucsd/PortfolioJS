@@ -212,15 +212,63 @@ footer img{
 }
 
 h2 {
-    margin-left: 2%;
+    margin-left: 0;
     margin-bottom: 1%;
-    color: var(--main-color);
+    /* color: var(--main-color);    */
 }
 
-h2+ul{
-    margin-left: 4%;
+#recipe-app {
+    margin-left: 2%;
     margin-bottom: 1%;
-    color: var(--main-color);
+    background-color: #495F48;
+    width: 40%;
+    color: var(--secondary-color);
+    padding: 2%;
+    border-radius: 15px;
+    animation: expand 1s;
+}
+
+@media screen and (max-width:600px) {
+    #recipe-app {
+        width: 92%;
+        height: 30vh;
+    }
+}
+
+@media (min-width:601px) and (orientation: portrait) {
+    #recipe-app {
+        width: 92%;
+        height: 30vh;
+    }
+}
+
+#auto-linkedin {
+    margin-left: 2%;
+    margin-bottom: 1%;
+    background-color: #495F48;
+    width: 40%;
+    color: var(--secondary-color);
+    padding: 2%;
+    border-radius: 15px;
+    animation: expand 2s;
+}
+
+@media screen and (max-width:600px) {
+    #auto-linkedin {
+        width: 92%;
+        height: 30vh;
+    }
+}
+
+@media (min-width:601px) and (orientation: portrait) {
+    #auto-linkedin {
+        width: 92%;
+        height: 30vh;
+    }
+}
+
+ul *{
+    color: var(--secondary-color);
 }
 
 #zest {
@@ -228,6 +276,8 @@ h2+ul{
     margin-bottom: 1%;
     width: 50%;
     height: 60vh;
+    border-radius: 20px;
+    animation: expand 3s;
 }
 
 @media screen and (max-width:600px) {
@@ -246,7 +296,14 @@ h2+ul{
 
 #languages {
     margin-left: 4%;
-    width: 50%;
+    width: 40%;
+    color: #495F48;
+    border-style: solid;
+    border-width: .25vw;
+    border-color: #495F48;
+    border-radius: 20px;
+    padding: 2%;
+    animation: expand 1s;
 }
 
 @media screen and (max-width:600px) {
@@ -269,7 +326,14 @@ h2+ul{
 
 #courses {
     margin-left: 4%;
-    width: 50%;
+    width: 40%;
+    color: #495F48;
+    border-style: solid;
+    border-width: .25vw;
+    border-color: #495F48;
+    border-radius: 20px;
+    padding: 2%;
+    animation: expand 2s;
 }
 
 @media screen and (max-width:600px) {
@@ -286,6 +350,7 @@ h2+ul{
 
 #content {
     display: flex;
+    flex-direction: row;
 }
 
 @media screen and (max-width:600px) {
@@ -326,6 +391,7 @@ h2+ul{
 
 figure {
     width: 50%;
+    animation: expand 2s;
 }
 
 @media screen and (max-width:600px) {
@@ -342,6 +408,7 @@ figure {
 
 .figure-img {
     width: 65%;
+    border-radius: 20px;
 }
 
 @media screen and (max-width:600px) {

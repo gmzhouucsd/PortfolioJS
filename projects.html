@@ -7,7 +7,13 @@
         <title>Projects</title>
         <link rel="icon" href=".    /favicon.ico" type="image/x-icon">
         <link rel="stylesheet" media="screen" href="./style.css" type="text/css">
-        <style></style>
+        <style>
+            #content {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+        </style>
     </head>
     <body>
         <header>
@@ -20,20 +26,26 @@
         </header>  
         <main>
             <h1 class="title">Projects</h1>
-            <h2>Recipe Manager App</h2>
-            <ul>
-                <li>Led an agile team of 13 to create a recipe manger web app that pulls recipes from an API while following a CRUD model.</li>
-                <li>Implemented several features including favoriting, creating locally-saved recipes, text-to-speech, and changing of serving size.</li>
-                <li>Organized efficient pipelining, unit testing, group meetings, and communication channels.</li>
-                <li>Programmed in HTML, CSS, and Javascript to develop the front end and back end of the website.</li>
-            </ul>
-            <iframe src="https://zeste.netlify.app/" id="zest" title="zest"></iframe>
-            <h2>Auto LinkedIn Applier</h2>
-            <ul>
-                <li>Constructed an application that automatically applies to jobs on Linkedin.</li>
-                <li>Utilized Python (Selenium) to web scrape LinkedIn for common job application input fields.</li>
-                <li>Incorporated a front end GUI with Python (T	kinter) to allow users to plug in answers for common input fields and transfer those answers to LinkedIn.</li>
-            </ul>
+            <section id="content">
+                <div id="recipe-app">
+                <h2>Recipe Manager App</h2>
+                    <ul>
+                        <li>Led an agile team of 13 to create a recipe manger web app that pulls recipes from an API while following a CRUD model.</li>
+                        <li>Implemented several features including favoriting, creating locally-saved recipes, text-to-speech, and changing of serving size.</li>
+                        <li>Organized efficient pipelining, unit testing, group meetings, and communication channels.</li>
+                        <li>Programmed in HTML, CSS, and Javascript to develop the front end and back end of the website.</li>
+                    </ul>
+                </div>
+                <iframe src="https://zeste.netlify.app/" id="zest" title="zest"></iframe>
+                <div id="auto-linkedin">
+                    <h2>Auto LinkedIn Applier</h2>
+                    <ul>
+                        <li>Constructed an application that automatically applies to jobs on Linkedin.</li>
+                        <li>Utilized Python (Selenium) to web scrape LinkedIn for common job application input fields.</li>
+                        <li>Incorporated a front end GUI with Python (T	kinter) to allow users to plug in answers for common input fields and transfer those answers to LinkedIn.</li>
+                    </ul>
+                </div>
+            </section>
         </main>
     </body>
 </html>
