@@ -12,3 +12,6 @@ Interests:
 Added border radius to pictures
 Added animations to the content
 Addded better alt text
+
+Google Analytics:
+Added Google Analytics to track website statistics
