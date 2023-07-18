@@ -46,13 +46,16 @@ body {
 }
 
 header {
-    background-color: var(--main-color);
-    border-radius: 20px;
-    margin: 1%;
-    padding: 2%;
 }
 
 nav {
+    width: 40%;
+    margin: 1%;
+    padding: 1%;
+    border-radius: 20px;
+    background-color: var(--main-color);
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     justify-content: space-evenly;
 }
@@ -68,9 +71,9 @@ img:hover {
 
 #front-page {
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    justify-content: center;
     height: 75vh;
+    
 }
 
 @media screen and (max-width:600px) {
@@ -140,11 +143,16 @@ img:hover {
 }
 
 #portrait {
-    margin: 1%;
+    /* margin: 1%;
     border-radius: 20px;
     width: 29%;
     height: 64%;
-    animation: expand 1.5s;
+    animation: expand 1.5s; */
+    width: 20%;
+    height: 90%;
+    margin: 1%;
+    overflow: hidden;
+    border-radius: 50% 50% 0 0;
 }
 
 @media screen and (max-width:600px) {
