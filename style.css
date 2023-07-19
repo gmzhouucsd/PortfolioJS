@@ -90,6 +90,13 @@ img:hover {
     }
 }
 
+#front-page p {
+    margin-left: 8%;
+    margin-top: 1%;
+    width: 40%;
+    font-size: 300%;
+}
+
 #name {
     background-color: var(--main-color);
     margin: 1%;

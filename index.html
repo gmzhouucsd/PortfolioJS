@@ -2,14 +2,13 @@
 <html lang="en">
     <head>
         <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-C845NE96NP"></script>
+        <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-C845NE96NP"></script>
         <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
-        gtag('config', 'G-C845NE96NP');
-        </script>
+        gtag('config', 'G-C845NE96NP'); -->
+        <!-- </script> -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -17,9 +16,39 @@
         <link rel="icon" href="./favicon.ico" type="image/x-icon">
         <link rel="stylesheet" media="screen" href="./style.css" type="text/css">
         <style>
-            table, th, td {
-            border: 1px solid black;
-        }
+            .slider {
+                width: 100%;
+                height: 100vh;
+                overflow-x: scroll;
+                scroll-snap-type: x mandatory;
+            }
+
+            .slide {
+                width: 100vw;
+                height: 100%;
+                scroll-snap-align: start;
+            }
+
+            .tracker {
+                display: flex;
+                justify-content: center;
+                margin-top: 20px;
+            }
+
+            .circle {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: #ccc;
+                margin: 0 5px;
+                transition: background-color 0.3s ease;
+            }
+
+            .circle.active {
+                background-color: #ff0000;
+            }
+
+        
         </style>
     </head>
     <body>
@@ -33,7 +62,26 @@
         <main>
             <div id="front-page">
                 <img src="portrait.jpg" id="portrait" alt="self-portrait"/>
-                <p>asdsagjihsadkgjdasgjhk</p>
+                <p>Hello! I'm Gavin, a recent UCSD Computer Science graduate. A majority of my experience is front-end based, but I have a passion for Full Stack Development.</p>
+            </div>
+            <div id="zest-slider">
+                <div class="slide" id="slide1">
+                    <!-- <img src="zest.png" id="zest" alt="zest"/> -->
+                    <p>blah blah</p>
+                </div>
+                <div class="slide" id="slide2">
+                    <!-- <img src="zest.png" id="zest" alt="zest"/> -->
+                    <p>blah blah</p>
+                  </div>
+                  <div class="slide" id="slide3">
+                    <!-- <img src="zest.png" id="zest" alt="zest"/> -->
+                    <p>blah blah</p>
+                  </div>
+            </div>
+            <div id="tracker" class="tracker">
+                <div class="circle active" data-slide="slide1"></div>
+                <div class="circle" data-slide="slide2"></div>
+                <div class="circle" data-slide="slide3"></div>
             </div>
         </main>
         <hr>
