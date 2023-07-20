@@ -1,14 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!-- Google tag (gtag.js) -->
-        <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-C845NE96NP"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-C845NE96NP'); -->
-        <!-- </script> -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -16,39 +8,36 @@
         <link rel="icon" href="./favicon.ico" type="image/x-icon">
         <link rel="stylesheet" media="screen" href="./style.css" type="text/css">
         <style>
+            .container {
+                padding: 2rem;
+                width: 70%;
+                margin: 1%;
+                margin-left: auto;
+                margin-right: auto;
+                background-color: #495F48;
+                border-radius: 15px;
+            }
+            .slider-wrapper {
+                position: relative;
+            }
             .slider {
-                width: 100%;
-                height: 100vh;
-                overflow-x: scroll;
-                scroll-snap-type: x mandatory;
-            }
-
-            .slide {
-                width: 100vw;
-                height: 100%;
-                scroll-snap-align: start;
-            }
-
-            .tracker {
                 display: flex;
-                justify-content: center;
-                margin-top: 20px;
+                aspect-ratio: 16 / 9;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                scroll-behavior: smooth;
+            }
+            .slider div {
+                display: flex;
+                flex: 1 0 100%;
+                scroll-snap-align: start;
+                object-fit: cover;
             }
 
-            .circle {
-                width: 10px;
-                height: 10px;
-                border-radius: 50%;
-                background-color: #ccc;
-                margin: 0 5px;
-                transition: background-color 0.3s ease;
+            .info img {
+                width: 50%;
+                height: 50%;
             }
-
-            .circle.active {
-                background-color: #ff0000;
-            }
-
-        
         </style>
     </head>
     <body>
@@ -64,25 +53,55 @@
                 <img src="portrait.jpg" id="portrait" alt="self-portrait"/>
                 <p>Hello! I'm Gavin, a recent UCSD Computer Science graduate. A majority of my experience is front-end based, but I have a passion for Full Stack Development.</p>
             </div>
-            <div id="zest-slider">
-                <div class="slide" id="slide1">
-                    <!-- <img src="zest.png" id="zest" alt="zest"/> -->
-                    <p>blah blah</p>
+            <h1>Zest</h1>
+            <section class="container">
+                <div class="slider-wrapper">
+                    <div class="slider">
+                        <div id="slide-1" class="info">
+                            <img src="team.png" width="50%" height="50%">
+                            <p>Zest was a group project that was developed in our Software Engineering course at UCSD. 
+                                Our group was made up of around 15 people (some are not shown here), and we were competing against 20 other teams. 
+                                For a lot of us, this was our first taste of what software engineering would look like in the real world. 
+                                In the end, we did not win any prizes, but we made a solid app and develoepd even more solid bonds.</p>
+                        </div>
+                        <div id="slide-2"  class="info">
+                            <img src="zest.png">
+                            <p>We made a recipe manager app that pulled recipes from the Spoonacular API.
+                                These recipes included ingredients, steps, and any dietary restrictions. 
+                                Users were also able to create their own recipes, which included the same amount of info.
+                            </p>
+                        </div>
+                        <div id="slide-3" class="info">
+                            <img src="crud.png">
+                            <p>
+                                To dive deeper into current-day practices, we developed our site under a CRUD model. 
+                                Therefore, creating, reading, updating/editing, deleting recipes were features of our app.
+                            </p>
+                        </div>
+                        <div id="slide-4" class="info">
+                            <img src="nutrition.png">
+                            <p>
+                                We also included features that were unique to our app like the nutrition facts. 
+                                This was only a feature that was available for the recipes generated from the API.
+                                This is due to the fact that the API had this info easily available while it might be much harder for users to create their own.
+                            </p>
+                        </div>
+                        <div id="slide-5" class="info">
+                            <img src="tts-conversion.png">
+                            <p>
+                                We also had features that made the site more accesible to others. 
+                                For one, there was text-to-speech that would activate when pressing the TTS button or any of the steps. 
+                                There was also a unit conversion built into our app for a variety of demographics.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="slider-nav">
+                        <a href="#slide-1"></a>
+                        <a href="#slide-2"></a>
+                        <a href="#slide-3"></a>
+                    </div>
                 </div>
-                <div class="slide" id="slide2">
-                    <!-- <img src="zest.png" id="zest" alt="zest"/> -->
-                    <p>blah blah</p>
-                  </div>
-                  <div class="slide" id="slide3">
-                    <!-- <img src="zest.png" id="zest" alt="zest"/> -->
-                    <p>blah blah</p>
-                  </div>
-            </div>
-            <div id="tracker" class="tracker">
-                <div class="circle active" data-slide="slide1"></div>
-                <div class="circle" data-slide="slide2"></div>
-                <div class="circle" data-slide="slide3"></div>
-            </div>
+            </section>
         </main>
         <hr>
         <footer>
