@@ -9,23 +9,24 @@
         <link rel="stylesheet" media="screen" href="./style.css" type="text/css">
         <style>
             .container {
-                padding: 2rem;
-                width: 70%;
+                padding: 1%;
+                /* width: 70%; */
                 margin: 1%;
                 margin-left: auto;
                 margin-right: auto;
-                background-color: #495F48;
-                border-radius: 15px;
+                /* background-color: #A9DCD6; */
+                border-radius: .5rem;
             }
             .slider-wrapper {
                 position: relative;
             }
             .slider {
                 display: flex;
-                aspect-ratio: 16 / 9;
+                /* aspect-ratio: 16 / 9; */
                 overflow-x: auto;
                 scroll-snap-type: x mandatory;
                 scroll-behavior: smooth;
+                border-radius: 1rem;
             }
             .slider div {
                 display: flex;
@@ -35,9 +36,36 @@
             }
 
             .info img {
-                width: 50%;
-                height: 50%;
+                width: 100%;
+                height: 100%;
             }
+            
+            .slider-nav {
+                display: flex;
+                column-gap: 1rem;
+                position: absolute;
+                bottom: 1.25rem;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 1;
+            }
+
+            .slider-nav a {
+                width: 0.5rem;
+                height: 0.5rem;
+                border-radius: 50%;
+                background-color: #495F48;
+                opacity: .75;
+                transition: opacity ease 250ms;
+            }
+
+            .slider-nav a:hover {
+                opacity: 1;
+            }
+
+            .slider::-webkit-scrollbar {
+                display: none;
+            }       
         </style>
     </head>
     <body>
@@ -58,36 +86,28 @@
                 <div class="slider-wrapper">
                     <div class="slider">
                         <div id="slide-1" class="info">
-                            <img src="team.png" width="50%" height="50%">
-                            <p>Zest was a group project that was developed in our Software Engineering course at UCSD. 
-                                Our group was made up of around 15 people (some are not shown here), and we were competing against 20 other teams. 
-                                For a lot of us, this was our first taste of what software engineering would look like in the real world. 
-                                In the end, we did not win any prizes, but we made a solid app and develoepd even more solid bonds.</p>
+                            <img src="zest.png">
                         </div>
                         <div id="slide-2"  class="info">
-                            <img src="zest.png">
-                            <p>We made a recipe manager app that pulled recipes from the Spoonacular API.
+                            <p>Zest was a group project that was developed in our Software Engineering course at UCSD. 
+                                We made a recipe manager app that pulled recipes from the Spoonacular API.
                                 These recipes included ingredients, steps, and any dietary restrictions. 
                                 Users were also able to create their own recipes, which included the same amount of info.
                             </p>
                         </div>
                         <div id="slide-3" class="info">
                             <img src="crud.png">
+                        </div>
+                        <div id="slide-4" class="info">
                             <p>
                                 To dive deeper into current-day practices, we developed our site under a CRUD model. 
                                 Therefore, creating, reading, updating/editing, deleting recipes were features of our app.
                             </p>
                         </div>
-                        <div id="slide-4" class="info">
-                            <img src="nutrition.png">
-                            <p>
-                                We also included features that were unique to our app like the nutrition facts. 
-                                This was only a feature that was available for the recipes generated from the API.
-                                This is due to the fact that the API had this info easily available while it might be much harder for users to create their own.
-                            </p>
-                        </div>
                         <div id="slide-5" class="info">
                             <img src="tts-conversion.png">
+                        </div>
+                        <div id="slide-6" class="info">
                             <p>
                                 We also had features that made the site more accesible to others. 
                                 For one, there was text-to-speech that would activate when pressing the TTS button or any of the steps. 
@@ -99,6 +119,9 @@
                         <a href="#slide-1"></a>
                         <a href="#slide-2"></a>
                         <a href="#slide-3"></a>
+                        <a href="#slide-4"></a>
+                        <a href="#slide-5"></a>
+                        <a href="#slide-6"></a>
                     </div>
                 </div>
             </section>
