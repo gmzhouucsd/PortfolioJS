@@ -1,54 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-C845NE96NP"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-C845NE96NP');
-        </script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Gavin's Portfolio</title>
         <link rel="icon" href="./favicon.ico" type="image/x-icon">
         <link rel="stylesheet" media="screen" href="./style.css" type="text/css">
-        <style>
-            table, th, td {
-            border: 1px solid black;
-        }
-        </style>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+        <script>
+            const swiper = new Swiper('.swiper', {
+                loop: true,
+
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        </script>
     </head>
     <body>
-        <header>
+        <!-- <header>
             <nav>
-                    <a href="./index.html">Home</a></li>
-                    <a href="./projects.html">Projects</a></li>
-                    <a href="./coursework.html">Coursework</a></li>
+                    <a href="#slide-1">Projects</a></li>
+                    <a href="./projects.html">Coursework</a></li>
+                    <a href="./coursework.html">Interests</a></li>
             </nav>
-        </header>
+        </header> -->
         <main>
-            <div id="front-page">
-                <h1 id="name">Gavin Zhou</h1>
-                <picture>
-                    <!-- <source media="" -->
-                </picture>
+            <section id="front-page">
                 <img src="portrait.jpg" id="portrait" alt="self-portrait"/>
-                <section id="info">
-                    <h1>Education</h1>
-                    <strong>University of California, San Diego</strong>
-                    <p>Bachelor of Science, Computer Science, <i>Minor in Business</i></p>
-                    <p>Sep 2019 - Jun 2023</p>
-                    <h1>About Me:</h1>
-                    <p>Computer science graduate with experience in front-end development. Passionate to further develop back-end skills through work experience and excel at a full stack developer role.</p>
-                    <h1>Contact Info</h1>
-                    <p>(510)696-3414</p>
-                    <p>gavinmzhou@gmail.com</p>
-                </section>
-            </div>
+                <p><strong style="color:#495F48">Hello! I'm Gavin, a recent UCSD Computer Science graduate.</strong> 
+                    A majority of my experience is front-end based, but I have a passion for Full Stack Development.</p>
+            </section>
+            <h1><a href="https://zeste.netlify.app/">Recipe Manager Project</a></h1>
+            <section class="container">
+                <div class="slider-wrapper">
+                    <div class="slider">
+                        <div id="zest-1" class="info">
+                            <img src="zest.png">
+                        </div>
+                        <div id="zest-2"  class="info">
+                            <p>Zest was a group project that I developed alongside 13 other people. 
+                                We made a recipe manager app that pulled recipes from the Spoonacular API.
+                                These recipes included ingredients, steps, and any dietary restrictions. 
+                                Users were also able to create their own recipes, which allowed them to put their own twists to these input fields.
+                            </p>
+                        </div>
+                        <div id="zest-3" class="info">
+                            <img src="crud.png">
+                        </div>
+                        <div id="zest-4" class="info">
+                            <p>
+                                To dive deeper into current-day practices, we developed our site under a CRUD model. 
+                                Therefore, creating, reading, updating/editing, deleting recipes were important features of our app.
+                            </p>
+                        </div>
+                        <div id="zest-5" class="zinfo">
+                            <img src="tts-conversion.png">
+                        </div>
+                        <div id="zest-6" class="info">
+                            <p>
+                                We had features that made the site more accesible to others. 
+                                For one, there was text-to-speech that would activate when pressing the TTS button or any of the steps. 
+                                There was also a unit conversion built into our app.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="slider-nav">
+                        <a href="#zest-1"></a>
+                        <a href="#zest-2"></a>
+                        <a href="#zest-3"></a>
+                        <a href="#zest-4"></a>
+                        <a href="#zest-5"></a>
+                        <a href="#zest-6"></a>
+                    </div>
+                </div>
+            </section>
+            <section class="interests">
+                <div class="gaming">
+                    <img src="gaming6.png">
+                    <p>Gaming has always been a big part of my life ever since my dad introduced me to them. 
+                        This picture represents a common trend among gamers, where they share their favorite games ever. 
+                        This image contains my top nine games that have made a big impact on my life through its struggles and lesson. 
+                        This list contains a huge variety of games like story-driven games, puzzle games, real-time-strategy games, etc.
+                    </p>
+                </div>
+            </section>
         </main>
         <hr>
         <footer>
