@@ -7,118 +7,38 @@
         <title>Gavin's Portfolio</title>
         <link rel="icon" href="./favicon.ico" type="image/x-icon">
         <link rel="stylesheet" media="screen" href="./style.css" type="text/css">
-        <style>
-            .container {
-                padding: 1%;
-                /* width: 70%; */
-                margin: 1%;
-                margin-left: auto;
-                margin-right: auto;
-                /* background-color: #A9DCD6; */
-                border-radius: .5rem;
-            }
-            .slider-wrapper {
-                position: relative;
-            }
-            .slider {
-                display: flex;
-                /* aspect-ratio: 16 / 9; */
-                overflow-x: auto;
-                scroll-snap-type: x mandatory;
-                scroll-behavior: smooth;
-                border-radius: 1rem;
-                background-color: #A9DCD6;
-            }
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+        <script>
+            const swiper = new Swiper('.swiper', {
+                loop: true,
 
-            .slider div {
-                display: flex;
-                flex: 1 0 100%;
-                scroll-snap-align: start;
-                object-fit: cover;
-            }
+                pagination: {
+                    el: '.swiper-pagination',
+                },
 
-            .info {
-
-            }
-
-            .info img {
-                width: 100%;
-                height: 100%;
-            }
-            
-            .info p {
-                vertical-align: middle;
-                font-size: 3rem;
-                color: #495F48;
-                text-align: center;
-            }
-
-            .slider-nav {
-                display: flex;
-                column-gap: 1rem;
-                position: absolute;
-                bottom: 1.25rem;
-                left: 50%;
-                transform: translateX(-50%);
-                z-index: 1;
-            }
-
-            .slider-nav a {
-                width: 0.5rem;
-                height: 0.5rem;
-                border-radius: 50%;
-                background-color: #495F48;
-                opacity: .75;
-                transition: opacity ease 250ms;
-            }
-
-            .slider-nav a:hover {
-                opacity: 1;
-            }
-
-            .slider::-webkit-scrollbar {
-                display: none;
-            }
-
-            #slide p {
-                font-size: 20px;
-            }
-
-            h1 {
-                text-align: center;
-                font-size: 5rem;
-                color: #495F48;
-                margin: 1%;
-            }
-
-            .gaming {
-                margin: 1%;
-                border-radius: 1rem;
-                background-color: #A9DCD6;
-                display: flex;
-            }
-
-            .gaming img {
-                border-radius: 1rem;
-                
-            }
-        </style>    
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        </script>
     </head>
     <body>
-        <header>
+        <!-- <header>
             <nav>
                     <a href="#slide-1">Projects</a></li>
                     <a href="./projects.html">Coursework</a></li>
                     <a href="./coursework.html">Interests</a></li>
             </nav>
-        </header>
+        </header> -->
         <main>
             <section id="front-page">
                 <img src="portrait.jpg" id="portrait" alt="self-portrait"/>
-                <p>Hello! I'm Gavin, a recent UCSD Computer Science graduate. 
+                <p><strong style="color:#495F48">Hello! I'm Gavin, a recent UCSD Computer Science graduate.</strong> 
                     A majority of my experience is front-end based, but I have a passion for Full Stack Development.</p>
             </section>
-            <h1>Recipe Manager Project</h1>
+            <h1><a href="https://zeste.netlify.app/">Recipe Manager Project</a></h1>
             <section class="container">
                 <div class="slider-wrapper">
                     <div class="slider">
@@ -126,10 +46,10 @@
                             <img src="zest.png">
                         </div>
                         <div id="zest-2"  class="info">
-                            <p>Zest was a group project that was developed in our Software Engineering course at UCSD. 
+                            <p>Zest was a group project that I developed alongside 13 other people. 
                                 We made a recipe manager app that pulled recipes from the Spoonacular API.
                                 These recipes included ingredients, steps, and any dietary restrictions. 
-                                Users were also able to create their own recipes, which included the same amount of info.
+                                Users were also able to create their own recipes, which allowed them to put their own twists to these input fields.
                             </p>
                         </div>
                         <div id="zest-3" class="info">
@@ -138,17 +58,17 @@
                         <div id="zest-4" class="info">
                             <p>
                                 To dive deeper into current-day practices, we developed our site under a CRUD model. 
-                                Therefore, creating, reading, updating/editing, deleting recipes were features of our app.
+                                Therefore, creating, reading, updating/editing, deleting recipes were important features of our app.
                             </p>
                         </div>
-                        <div id="zest-5" class="info">
+                        <div id="zest-5" class="zinfo">
                             <img src="tts-conversion.png">
                         </div>
                         <div id="zest-6" class="info">
                             <p>
-                                We also had features that made the site more accesible to others. 
+                                We had features that made the site more accesible to others. 
                                 For one, there was text-to-speech that would activate when pressing the TTS button or any of the steps. 
-                                There was also a unit conversion built into our app for a variety of demographics.
+                                There was also a unit conversion built into our app.
                             </p>
                         </div>
                     </div>
@@ -166,8 +86,9 @@
                 <div class="gaming">
                     <img src="gaming6.png">
                     <p>Gaming has always been a big part of my life ever since my dad introduced me to them. 
-                        This is a common trend among gamers, where they share their favorite games ever. 
-                        This image contains my top six games that have made a big impact on my life through its struggles and lesson.
+                        This picture represents a common trend among gamers, where they share their favorite games ever. 
+                        This image contains my top nine games that have made a big impact on my life through its struggles and lesson. 
+                        This list contains a huge variety of games like story-driven games, puzzle games, real-time-strategy games, etc.
                     </p>
                 </div>
             </section>
