@@ -161,7 +161,7 @@ footer img{
     scroll-behavior: smooth;
     border-radius: 1rem;
     background-color: #3A5950;
-    height: 100vh;
+    height: 89vh;
 }
 
 .slider div {
@@ -177,8 +177,8 @@ footer img{
     align-items: center;
 }
 
-.info img {
-    display: block;
+.info img, .info video {
+    /* display: block; */
     height: 100%;
     width: auto;
 }
@@ -204,12 +204,12 @@ footer img{
 }
 
 .slider-nav a {
-    width: .65rem;
-    height: .65rem;
+    width: 1rem;
+    height: 1rem;
     border-radius: 50%;
     border-style: solid;
     border-color: var(--main-color);
-    border-width: 1px;
+    border-width: 3px;
     background-color: var(--secondary-color);
     opacity: .75;
     transition: opacity ease 250ms;
@@ -262,7 +262,7 @@ h1 {
     font-size: 4vw;
     color: #3A5950;
     margin: 1%;
-    margin-top: 8%;
+    margin-top: 5%;
     text-decoration: none;
 }
 
