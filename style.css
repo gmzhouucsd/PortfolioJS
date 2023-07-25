@@ -225,7 +225,6 @@ footer img{
 
 .slider {
     -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
   }
 
 @media screen and (max-width:600px) {
