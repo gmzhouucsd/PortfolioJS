@@ -1,5 +1,5 @@
 :root {
-    --main-color: #495F48;
+    --main-color: #3A5950;
     --secondary-color: #E6E6E6;
     --tertiary-color: #D9D9D9;
 }
@@ -32,40 +32,6 @@ body {
     background-color: var(--secondary-color);
 }
 
-@media screen and (max-width:600px) {
-    body {
-        /* font-size: 3vw; */
-    }
-}
-
-@media screen and (orientation: portrait) {
-    body {
-        /* font-size: 3vw; */
-    }
-}
-
-/* header {
-    position: sticky;
-    top: 10px;
-}
-
-nav {
-    width: 40%;
-    margin: 1%;
-    padding: 1%;
-    border-radius: 20px;
-    background-color: var(--main-color);
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-nav a, nav a:visited {
-    color: var(--secondary-color);
-    text-decoration: none;
-} */
-
 #front-page {
     display: flex;
     justify-content: center;
@@ -77,8 +43,6 @@ nav a, nav a:visited {
 
 @media screen and (max-width:600px) {
     #front-page {
-        /* flex-wrap: nowrap; */
-        /* height: 100vh; */
         justify-content: none;
         flex-direction: column;
         width: 100%;
@@ -87,8 +51,9 @@ nav a, nav a:visited {
 
 @media (min-width:601px) and (orientation: portrait) {
     #front-page {
-        /* flex-wrap: nowrap; */
-        /* height: 130vh; */
+        justify-content: none;
+        flex-direction: column;
+        width: 100%;
     }
 }
 
@@ -96,12 +61,13 @@ nav a, nav a:visited {
     margin-left: 8%;
     margin-top: 5%;
     width: 40%;
-    font-size: 2.5em;
+    height: auto;
+    font-size: 3vw;
 }
 
 #portrait {
-    width: 20%;
-    height: 70vh;
+    width: 25%;
+    height: auto;
     margin: 1%;
     margin-top: 5%;
     overflow: hidden;
@@ -115,7 +81,7 @@ nav a, nav a:visited {
     }
     #front-page p {
         width: 100%;
-        font-size: 2em;
+        font-size: 8vw;
         margin: 1%;
     }
 }
@@ -123,6 +89,12 @@ nav a, nav a:visited {
 @media (min-width:601px) and (orientation: portrait) {
     #portrait {
         width: 100%;
+        margin: 1%;
+    }
+    #front-page p {
+        width: 100%;
+        font-size: 8vw;
+        margin: 1%;
     }
 }
 
@@ -206,13 +178,16 @@ footer img{
 }
 
 .info img {
-    width: 100%;
-    /* height: 100%; */
+    display: block;
+    height: 100%;
+    width: auto;
 }
 
 .info p {
+    width: 100%;
+    height: auto;
     text-align: center;
-    font-size: 2rem;
+    font-size: 2vw;
     color: var(--tertiary-color);
     padding: 5%;
     opacity: .85;
@@ -248,10 +223,6 @@ footer img{
     display: none;
 }
 
-#slide p {
-    font-size: 20px;
-}
-
 @media screen and (max-width:600px) {
     .info img {
         height: 100%;
@@ -259,7 +230,22 @@ footer img{
     }
 
     .info p {
-        font-size: 1.5em;
+        font-size: 4vw;
+    }
+
+    .slider {
+        height: 90vh;
+    }
+}
+
+@media (min-width:601px) and (orientation: portrait) {
+    .info img {
+        height: 100%;
+        width: auto;
+    }
+
+    .info p {
+        font-size: 4vw;
     }
 
     .slider {
@@ -269,7 +255,7 @@ footer img{
 
 h1 {
     text-align: center;
-    font-size: 3.5rem;
+    font-size: 4vw;
     color: #3A5950;
     margin: 1%;
     margin-top: 8%;
@@ -280,7 +266,7 @@ h1 a, h1 a:visited {
     color: var(--main-color);
 }
 
-.gaming {
+/* .gaming {
     padding: 1%;
     width:  90%;
     margin-left: auto;
@@ -303,7 +289,7 @@ h1 a, h1 a:visited {
     opacity: .85;
     font-size: 2rem;
     margin-left: 2%;
-}
+} */
 
 @media screen and (max-width:600px) {
     .gaming {
@@ -323,4 +309,36 @@ h1 a, h1 a:visited {
         font-size: 1.5em;
         margin: 1%;
     }
+
+    h1 {
+        font-size: 10vw;
+    }
+}
+
+@media (min-width:601px) and (orientation: portrait) {
+    .gaming {
+        flex-direction: column;
+    }
+
+    .gaming img {
+        border-radius: 1rem;
+        width: 100%;
+        height: auto;
+        margin: 1%;
+    }
+
+    .gaming p {
+        color: var(--tertiary-color);
+        opacity: .85;
+        font-size: 1.5em;
+        margin: 1%;
+    }
+
+    h1 {
+        font-size: 10vw;
+    }
+}
+
+#interests-3{
+    max-width: 95%;
 }
