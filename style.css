@@ -179,8 +179,8 @@ footer img{
 
 .info img, .info video {
     /* display: block; */
-    height: 100%;
-    width: auto;
+    width: 100%;
+    height: auto;
 }
 
 .info p {
