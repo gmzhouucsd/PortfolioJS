@@ -28,7 +28,7 @@
 }
 
 body {
-    font-family: "Courier New", Courier, monospace;
+    font-family: 'Open Sans';
     background-color: var(--secondary-color);
 }
 
@@ -62,7 +62,7 @@ body {
     margin-top: 5%;
     width: 40%;
     height: auto;
-    font-size: 3vw;
+    font-size: 2.1vw;
 }
 
 #portrait {
